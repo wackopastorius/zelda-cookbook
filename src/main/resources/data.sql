@@ -3,10 +3,10 @@ INSERT INTO veg_recipe (recipe_name) VALUES ('Creamy heart soup'),
                                             ('Veggie cream soup'),
                                             ('Cream of mushroom soup');
 
-INSERT INTO seafood_recipe (recipe_name) VALUES ('Clam chowder'),
-                                                ('Creamy seafood soup'),
-                                                ('Seafood curry'),
-                                                ('Salmon risotto');
+INSERT INTO seafood_recipe (image_url, recipe_name) VALUES ('https://th.bing.com/th/id/OIG.4Un32zGN4N0GpXgeufAn?pid=ImgGn', 'Clam chowder'),
+                                                           ('https://th.bing.com/th/id/OIG.xm47kOVr23uFqCb9lGNG?pid=ImgGn', 'Creamy seafood soup'),
+                                                           ('https://th.bing.com/th/id/OIG.sH7Se_ffMBKcGEmNo66A?pid=ImgGn', 'Seafood curry'),
+                                                           ('https://th.bing.com/th/id/OIG.SvGYQ5YmWpquFuV9jnQJ?pid=ImgGn', 'Salmon risotto');
 
 INSERT INTO surfturf_recipe (recipe_name) VALUES ('Meat and seafood fry'),
                                                  ('Prime meat and seafood fry'),

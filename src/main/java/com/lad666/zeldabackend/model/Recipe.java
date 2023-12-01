@@ -13,8 +13,17 @@ public abstract class Recipe {
     @Column(name = "recipe_name")
     private String name;
 
+    @Column(name = "image_url")
+    private String imageURL;
+
     //constructors
     public Recipe() {
+    }
+
+    public Recipe(int id, String name, String imageURL) {
+        this.id = id;
+        this.name = name;
+        this.imageURL = imageURL;
     }
 
     public Recipe(int id, String name) {
