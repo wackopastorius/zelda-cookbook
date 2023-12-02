@@ -13,7 +13,7 @@ INSERT INTO surfturf_recipe (recipe_name) VALUES ('Meat and seafood fry'),
                                                  ('Gourmet meat and seafood fry'),
                                                  ('Spicy meat and seafood fry');
 
-INSERT INTO meat_recipe (recipe_name) VALUES ('Meat stew'),
-                                             ('Gourmet poultry curry'),
-                                             ('Spiced meat skewer'),
-                                             ('Prime poultry pilaf');
+INSERT INTO meat_recipe (image_url, recipe_name) VALUES ('https://th.bing.com/th/id/OIG.ph_Jytp2tPP.JXy8Edod?pid=ImgGn','Meat stew'),
+                                                        ('https://th.bing.com/th/id/OIG.pbyOHbStModhITGsAfUl?pid=ImgGn','Gourmet poultry curry'),
+                                                        ('https://th.bing.com/th/id/OIG.Wzer7543Ugw.A7Hr4vfB?pid=ImgGn','Spiced meat skewer'),
+                                                        ('https://th.bing.com/th/id/OIG.E.MAk2Rkg3vKqmShVA52?pid=ImgGn','Prime poultry pilaf');
