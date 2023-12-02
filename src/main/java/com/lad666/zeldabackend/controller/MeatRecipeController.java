@@ -17,11 +17,6 @@ public class MeatRecipeController {
     @Autowired
     private MeatService meatService;
 
-    //constructors
-    public MeatRecipeController(MeatService meatService) {
-        this.meatService = meatService;
-    }
-
     //requests
     @GetMapping("/meatrecipes")
     public List<MeatRecipe> getAllMeatRecipes() {
