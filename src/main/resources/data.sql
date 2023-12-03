@@ -17,3 +17,7 @@ INSERT INTO meat_recipe (recipe_name) VALUES ('Meat stew'),
                                              ('Gourmet poultry curry'),
                                              ('Spiced meat skewer'),
                                              ('Prime poultry pilaf');
+
+INSERT INTO user_table (user_email, user_password) VALUES ('mikal@smaland.com', '123456'),
+                                          ('andreas@andreas.com', '654321'),
+                                          ('kung_g@kung.com', 'kung777');

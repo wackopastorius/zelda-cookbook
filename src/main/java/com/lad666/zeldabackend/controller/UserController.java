@@ -1,7 +1,8 @@
 package com.lad666.zeldabackend.controller;
 
+import com.lad666.zeldabackend.model.User;
 import com.lad666.zeldabackend.model.VegetarianRecipe;
-import com.lad666.zeldabackend.service.VegService;
+import com.lad666.zeldabackend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,19 +14,20 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/v1")
-public class VegRecipeController {
-    //properties
+public class UserController {
     @Autowired
-    private VegService vegService;
+    private UserService userService;
 
     //constructors
-    public VegRecipeController(VegService vegService) {
-        this.vegService = vegService;
+    public UserController() {
+    }
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
 
     //requests
-    @GetMapping("/vegrecipes")
-    public List<VegetarianRecipe> getAllVegRecipes() {
-        return vegService.getAllVegRecipes();
+    @GetMapping("/users")
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
     }
 }
