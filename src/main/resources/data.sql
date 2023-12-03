@@ -18,3 +18,13 @@ INSERT INTO meat_recipe (image_url, recipe_name) VALUES ('https://th.bing.com/th
                                                         ('https://th.bing.com/th/id/OIG.Wzer7543Ugw.A7Hr4vfB?pid=ImgGn','Spiced meat skewer'),
                                                         ('https://th.bing.com/th/id/OIG.E.MAk2Rkg3vKqmShVA52?pid=ImgGn','Prime poultry pilaf');
 
+
+INSERT INTO meat_recipe (recipe_name) VALUES ('Meat stew'),
+                                             ('Gourmet poultry curry'),
+                                             ('Spiced meat skewer'),
+                                             ('Prime poultry pilaf');
+
+INSERT INTO user_table (user_email, user_password) VALUES ('mikal@smaland.com', '123456'),
+                                          ('andreas@andreas.com', '654321'),
+                                          ('kung_g@kung.com', 'kung777');
+
