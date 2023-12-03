@@ -18,13 +18,7 @@ INSERT INTO meat_recipe (image_url, recipe_name) VALUES ('https://th.bing.com/th
                                                         ('https://th.bing.com/th/id/OIG.Wzer7543Ugw.A7Hr4vfB?pid=ImgGn','Spiced meat skewer'),
                                                         ('https://th.bing.com/th/id/OIG.E.MAk2Rkg3vKqmShVA52?pid=ImgGn','Prime poultry pilaf');
 
-
-INSERT INTO meat_recipe (recipe_name) VALUES ('Meat stew'),
-                                             ('Gourmet poultry curry'),
-                                             ('Spiced meat skewer'),
-                                             ('Prime poultry pilaf');
-
-INSERT INTO user_table (user_email, user_password) VALUES ('mikal@smaland.com', '123456'),
-                                          ('andreas@andreas.com', '654321'),
-                                          ('kung_g@kung.com', 'kung777');
-
+INSERT INTO user_table (user_email, user_password) VALUES   ('mikal@smaland.com', 'b95aa72554146628c58fea4bbab7d5ca'),
+                                                            ('andreas@andreas.com', 'e024f9589c1e9d64b34cb1257d9c9dfc'),
+                                                            ('kung_g@kung.com', 'ec202f2e63c24ebfb1a2c7e7fb1cd60f'),
+                                                            ('lada@redux.die', '0fc78de9831d9bf42f25a2ec99df7c25');
