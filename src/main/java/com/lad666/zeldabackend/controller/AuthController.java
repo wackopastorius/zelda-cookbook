@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class AuthController {
     @Autowired
     private AuthService authService;
-    @GetMapping("/auth")
+    @PostMapping("/auth")
     public ResponseEntity<User> getAuthorizedUser(@RequestBody AuthRequest authRequest) {
         try {
             return ResponseEntity.ok(authService.getValidatedUser(authRequest));
