@@ -2,6 +2,8 @@ package com.lad666.zeldabackend.model;
 
 import jakarta.persistence.*;
 
+import java.util.UUID;
+
 @Entity
 @Table(name = "meat_recipe")
 public class MeatRecipe {
@@ -17,18 +19,17 @@ public class MeatRecipe {
     @Column(name = "image_url")
     private String imageURL;
 
+    @Column(name = "uuid")
+    private UUID uuid;
+
     public MeatRecipe() {
     }
 
-    public MeatRecipe(String name, String imageURL) {
-        this.name = name;
-        this.imageURL = imageURL;
-    }
-
-    public MeatRecipe(int id, String name, String imageURL) {
+    public MeatRecipe(int id, String name, String imageURL, UUID uuid) {
         this.id = id;
         this.name = name;
         this.imageURL = imageURL;
+        this.uuid = UUID.randomUUID();
     }
 
     public int getId() {
@@ -53,5 +54,13 @@ public class MeatRecipe {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 }

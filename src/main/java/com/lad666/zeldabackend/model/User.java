@@ -2,6 +2,9 @@ package com.lad666.zeldabackend.model;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "user_table")
 public class User {
@@ -13,6 +16,7 @@ public class User {
     private String email;
     @Column(name = "user_password")
     private String password;
+
 
     //constructor
     public User() {
