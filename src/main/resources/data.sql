@@ -1,7 +1,7 @@
-INSERT INTO veg_recipe (image_url, recipe_name, uuid) VALUES ('https://th.bing.com/th/id/OIG.ejc19TxD1dELmWagbSJd?pid=ImgGn','Creamy heart soup', '8877e2c2-d8fd-4789-860e-15de82500e6f'),
-                                                       ('https://th.bing.com/th/id/OIG.VFksWssprOT0OfHY_daX?pid=ImgGn','Pumpkin stew', '8d9af33d-51af-4b3a-a0a2-2b48a6823189'),
-                                                       ('https://th.bing.com/th/id/OIG.wh562TKQOOjbRdaUKRa4?pid=ImgGn','Veggie cream soup', '705de123-578f-409b-a1e2-0c5d7baa8732'),
-                                                       ('https://th.bing.com/th/id/OIG.1mYXSeIdNqMk8.gmp.GB?pid=ImgGn','Cream of mushroom soup', 'f7c74f0e-af8d-4d87-bc01-19c35cdf8815');
+INSERT INTO veg_recipe (image_url, recipe_name, uuid, likes_counter, dislikes_counter) VALUES ('https://th.bing.com/th/id/OIG.ejc19TxD1dELmWagbSJd?pid=ImgGn','Creamy heart soup', '8877e2c2-d8fd-4789-860e-15de82500e6f', 0, 0),
+                                                                                              ('https://th.bing.com/th/id/OIG.VFksWssprOT0OfHY_daX?pid=ImgGn','Pumpkin stew', '8d9af33d-51af-4b3a-a0a2-2b48a6823189', 0, 0),
+                                                                                              ('https://th.bing.com/th/id/OIG.wh562TKQOOjbRdaUKRa4?pid=ImgGn','Veggie cream soup', '705de123-578f-409b-a1e2-0c5d7baa8732', 0, 0),
+                                                                                              ('https://th.bing.com/th/id/OIG.1mYXSeIdNqMk8.gmp.GB?pid=ImgGn','Cream of mushroom soup', 'f7c74f0e-af8d-4d87-bc01-19c35cdf8815', 0, 0);
 
 INSERT INTO seafood_recipe (image_url, recipe_name, uuid) VALUES ('https://th.bing.com/th/id/OIG.4Un32zGN4N0GpXgeufAn?pid=ImgGn', 'Clam chowder', '65758147-5b5f-470e-8fc4-390273416d09'),
                                                            ('https://th.bing.com/th/id/OIG.xm47kOVr23uFqCb9lGNG?pid=ImgGn', 'Creamy seafood soup', 'f675e3a7-e930-408c-a8ca-38b18b7bf6dc'),

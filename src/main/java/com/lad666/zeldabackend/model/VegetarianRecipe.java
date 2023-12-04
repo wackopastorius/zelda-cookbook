@@ -21,15 +21,22 @@ public class VegetarianRecipe {
     @Column(name = "uuid")
     private UUID uuid;
 
+    @Column(name="likes_counter")
+    private int likes;
+    @Column(name="dislikes_counter")
+    private int dislikes;
+
     //constructors
     public VegetarianRecipe() {
     }
 
-    public VegetarianRecipe(int id, String name, String imageURL, UUID uuid) {
+    public VegetarianRecipe(int id, String name, String imageURL, UUID uuid, int likes, int dislikes) {
         this.id = id;
         this.name = name;
         this.imageURL = imageURL;
-        this.uuid = UUID.randomUUID();
+        this.uuid = uuid;
+        this.likes = likes;
+        this.dislikes = dislikes;
     }
 
     //get & set
@@ -60,5 +67,21 @@ public class VegetarianRecipe {
 
     public void setUuid(UUID uuid) {
         this.uuid = uuid;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
+    }
+
+    public int getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(int dislikes) {
+        this.dislikes = dislikes;
     }
 }
