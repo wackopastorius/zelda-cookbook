@@ -1,11 +1,13 @@
 package com.lad666.zeldabackend.model;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.util.UUID;
 
 @Entity
 @Table(name="veg_recipe")
+@DynamicUpdate
 public class VegetarianRecipe {
     //properties
     @Id

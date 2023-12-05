@@ -1,12 +1,11 @@
 package com.lad666.zeldabackend.controller;
 
+import com.lad666.zeldabackend.exception.ResourceNotFoundException;
 import com.lad666.zeldabackend.model.VegetarianRecipe;
 import com.lad666.zeldabackend.service.VegService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -27,5 +26,10 @@ public class VegRecipeController {
     @GetMapping("/vegrecipes")
     public List<VegetarianRecipe> getAllVegRecipes() {
         return vegService.getAllVegRecipes();
+    }
+
+    @PutMapping("/vegrecipes/likes/{id}")
+    public ResponseEntity<VegetarianRecipe> updateLikesForRecipe(@PathVariable("id") int id, @RequestBody VegetarianRecipe vegetarianRecipe) throws ResourceNotFoundException {
+        return ResponseEntity.ok(vegService.updateLikesForRecipe(vegetarianRecipe, id));
     }
 }
