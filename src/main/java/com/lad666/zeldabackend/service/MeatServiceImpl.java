@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface MeatServiceImpl {
 
-    List<MeatRecipe> getAllMeatRecipes();
+    List<MeatRecipe> getAllMeatRecipes(String token);
 }

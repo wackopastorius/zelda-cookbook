@@ -2,11 +2,9 @@ package com.lad666.zeldabackend.controller;
 
 import com.lad666.zeldabackend.model.MeatRecipe;
 import com.lad666.zeldabackend.service.MeatService;
+import com.lad666.zeldabackend.util.JWTHandler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,8 +16,8 @@ public class MeatRecipeController {
     private MeatService meatService;
 
     //requests
-    @GetMapping("/meatrecipes")
-    public List<MeatRecipe> getAllMeatRecipes() {
-        return meatService.getAllMeatRecipes();
+    @PostMapping("/meatrecipes")
+    public List<MeatRecipe> getAllMeatRecipes(@RequestHeader(value = "Authorization", required = true) String token) {
+        return meatService.getAllMeatRecipes(token.split(" ")[1]);
     }
 }

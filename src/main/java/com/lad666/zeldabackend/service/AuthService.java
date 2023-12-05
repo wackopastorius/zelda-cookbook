@@ -5,6 +5,7 @@ import com.lad666.zeldabackend.model.AuthRequest;
 import com.lad666.zeldabackend.model.User;
 import com.lad666.zeldabackend.repository.UserRepository;
 import com.lad666.zeldabackend.util.AuthTool;
+import com.lad666.zeldabackend.util.JWTHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +15,13 @@ import java.util.Optional;
 public class AuthService {
     @Autowired
     UserRepository userRepository;
-    public User getValidatedUser(AuthRequest authRequest) throws ResourceNotFoundException {
+    public String getValidatedUser(AuthRequest authRequest) throws ResourceNotFoundException {
         Optional<User> userToValidate = userRepository.findUserByEmail(authRequest.getEmail());
         if(userToValidate.isPresent()){
             if(AuthTool.validateUser(userToValidate.get(), authRequest.getPassword())){
                 System.out.println("Is valid");
-                return userToValidate.get();
+                return JWTHandler.generateToken(userToValidate.get().getId());
+                //return userToValidate.get();
             } else {
                 System.out.println("Not valid");
                 throw new ResourceNotFoundException("User", "Email", authRequest.getEmail());
